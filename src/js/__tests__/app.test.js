@@ -1,39 +1,36 @@
-import { hero }  from '../app';
-
-
+import hero from '../app';
 
 
 test('1 check for xp', () => {
   const character = {
-    name: 'Маг', 
-    health: 90
-  }
-  const result = hero(character)
+    name: 'Маг',
+    health: 90,
+  };
+  const result = hero(character);
 
-  const expected = "healthy";
+  const expected = 'healthy';
   expect(result).toBe(expected);
-} );
+});
 
 
 test('2 check for xp', () => {
- 
   const character = {
-    name: 'Маг', 
-    health: 30
-  }
+    name: 'Маг',
+    health: 30,
+  };
   const result = hero(character);
-  const expected = "wounded";
+  const expected = 'wounded';
   expect(result).toBe(expected);
-} );
+});
 
 
 test('3 check for xp', () => {
   const character = {
-    name: 'Маг', 
-    health: 0
-  }
+    name: 'Маг',
+    health: 0,
+  };
   const result = hero(character);
 
-  const expected = "critical";
+  const expected = 'critical';
   expect(result).toBe(expected);
-} );
+});
